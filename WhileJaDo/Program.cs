@@ -8,7 +8,7 @@ namespace WhileJaDo
         {
 
             Console.WriteLine("Sisesta Valik:");
-            Console.WriteLine("1 Maja");
+            Console.WriteLine("1 Maja, 2 Teemant");
 
             string meetod = Console.ReadLine();
             int number = Convert.ToInt32(meetod);
@@ -16,6 +16,10 @@ namespace WhileJaDo
             if (number == 1)
             {
                 maja();
+            }
+            else if (number == 2)
+            {
+                teemant();
             }
 
             static void maja()
@@ -62,6 +66,51 @@ namespace WhileJaDo
                         Console.Write(mark);
                     }
                     Console.WriteLine();
+                }
+            }
+            static void teemant()
+            {
+                int i, j, r;
+
+                Console.Write("\n\n");
+                Console.Write("Teemant:\n");
+                Console.Write("-----------------------------------");
+                Console.Write("\n\n");
+
+                Console.Write("Sisesta suurus: ");
+                r = Convert.ToInt32(Console.ReadLine());
+
+
+
+                for (i = 0; i <= r; i++)
+                {
+                    for (j = 1; j <= r - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    for (j = 1; j <= 2 * i - 1; j++)
+                    {
+                        Console.Write("*");
+                    }
+
+                    Console.Write("\n");
+                }
+
+                for (i = r - 1; i >= 1; i--)
+                {
+                    for (j = 1; j <= r - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+
+                    for (j = 1; j <= 2 * i - 1; j++)
+                    {
+                        Console.Write("*");
+                    }
+
+                    Console.Write("\n");
                 }
             }
         }
